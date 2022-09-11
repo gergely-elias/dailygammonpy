@@ -15,10 +15,10 @@ def read_from_json_file(file_path):
     return data
 
 
-def write_to_text_file(lines, file_path, add_new_line=True):
+def write_to_text_file(lines, file_path, line_end_character="\n"):
     text_file = open(file_path, "w")
     for line in lines:
-        text_file.write(line + ("\n" if add_new_line else ""))
+        text_file.write(line + line_end_character)
     text_file.close()
 
 
